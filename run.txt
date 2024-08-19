@@ -1,0 +1,17 @@
+composer install
+npm install
+
+cp .env.example .env
+php artisan key:generate
+
+php artisan migrate
+php artisan storage:link
+
+INSTALL broadcasting and reverb
+php artisan install:broadcasting
+composer require laravel/reverb
+php artisan reverb:install
+
+Start prodject
+npm run dev
+php artisan reverb:start 
